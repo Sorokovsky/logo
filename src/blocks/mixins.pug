@@ -13,6 +13,24 @@
             href: "./contact"
         },
     ]
+    let screenshots = [
+        {
+            img: "@img/screenshots/navigator.png",
+            desc: 'In the navigator tab located in the right panel you can see all your elements in one place.'
+        },
+        {
+            img: "@img/screenshots/selector.png",
+            desc: "Double click an image to replace it."
+        },
+        {
+            img: "@img/screenshots/selector2.png",
+            desc: "You can also double click an image to change its size."
+        },
+        {
+            img: "@img/screenshots/layout.png",
+            desc: "Flexbox is a display setting found in the styles tab under Layout > Display Settings"
+        }
+    ]
 mixin head(title, descripton, keywords)
     head
         meta(charset="UTF-8")
@@ -22,8 +40,12 @@ mixin head(title, descripton, keywords)
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="css/style.min.css")
         title=title 
+mixin screenshot(item)
+    img(src=item.img, alt=item.desc)
+    span.screenshot__desc=item.desc
 mixin menu(items)
-    ul.menu__list 
-        for item in items
-            li.menu__item
-                a(href=item.href)=item.name
+    nav 
+        ul.menu__list 
+            for item in items
+                li.menu__item
+                    a(href=item.href)=item.name

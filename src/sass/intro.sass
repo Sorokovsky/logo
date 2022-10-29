@@ -1,0 +1,24 @@
+.intro
+    background: $primaryBg
+    &__container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 10rem
+    &__desc
+        max-width: 576rem
+        h1
+            margin-bottom: 11rem
+        p
+            margin-bottom: 30rem
+        .start
+            padding: 14.1rem 15rem
+            background: #ffffff
+            font-size: 14rem
+    &__image
+        max-width: 320rem
+@media screen and (max-width: 712px)
+    .intro
+        &__container
+            flex-direction: column
+            text-align: center
